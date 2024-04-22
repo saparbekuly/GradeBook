@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="391dp"
+    android:layout_height="389dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/border">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:background="@color/blue"
+        android:text="Statistics" />
+
+    <TextView
+        android:id="@+id/statistics_total"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:background="@drawable/border_item"
+        android:text="Total Students: " />
+
+    <TextView
+        android:id="@+id/statistics_average"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:background="@drawable/border_item"
+        android:text="Average Score: " />
+
+    <TextView
+        android:id="@+id/statistics_highest"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:background="@drawable/border_item"
+        android:text="Highest Score: " />
+
+    <TextView
+        android:id="@+id/statistics_lowest"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:background="@drawable/border_item"
+        android:text="Lowest Score:" />
+
+    <TextView
+        android:id="@+id/statistics_grade"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:background="@drawable/border_item"
+        android:text="Final Grade:" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="GradeBook"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/menu_btn"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:contentDescription="Options Menu"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/menu_btn"
+        tools:ignore="TouchTargetSizeCheck"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/sort_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/sort_btn"
+            android:contentDescription="Sort By"
+            android:background="@null"
+            android:scaleType="fitCenter"/>
+
+        <EditText
+            android:id="@+id/searchView"
+            android:layout_width="311dp"
+            android:layout_height="50dp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:hint="Search Student"
+            android:textColorHint="#a0a0a0"
+            android:drawablePadding="8dp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/search_icon">
+
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/statistics_btn"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:contentDescription="Statistics"
+            android:scaleType="fitCenter"
+            android:src="@drawable/statistics_btn"
+            tools:ignore="TouchTargetSizeCheck">
+        </ImageButton>
+
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar">
+
+        <TableRow
+            android:background="@drawable/border_item"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:text="#" />
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:text="ID" />
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:text="Name" />
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:text="Score" />
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:text="Grade" />
+        </TableRow>
+    </TableLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+    <ImageButton
+        android:id="@+id/add_student_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:contentDescription="Add Student"
+        android:src="@drawable/add_btn" />
+</RelativeLayout>
